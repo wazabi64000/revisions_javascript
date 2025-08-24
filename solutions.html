@@ -12,7 +12,6 @@ nav.navbar a { color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-
 nav.navbar a:hover { background: #40739e;}
 h1 { text-align: center; color: #2f3640; margin-top: 1rem;}
 .card { background: #fff; border-radius: 12px; padding: 1.5rem; margin: 1rem 0; box-shadow: 0 6px 22px rgba(0,0,0,0.08);}
-.card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.12);}
 pre { background: #f3f4f6; padding: 1rem; border-radius: 6px; overflow-x: auto;}
 </style>
 </head>
@@ -27,47 +26,65 @@ pre { background: #f3f4f6; padding: 1rem; border-radius: 6px; overflow-x: auto;}
 </header>
 
 <main>
+
 <div class="card" id="ex1">
-<h2>1. Console et variables</h2>
+<h3>1. Console et variables</h3>
 <pre>
 let a = 5;
 let b = 10;
 console.log("Résultat :", a + b);
 </pre>
-<p>On déclare deux variables avec <code>let</code> et on utilise <code>console.log()</code> pour afficher la somme.</p>
+<p>Deux variables sont déclarées et additionnées. `console.log()` permet d’afficher le résultat.</p>
 </div>
 
 <div class="card" id="ex2">
-<h2>2. Tableaux et boucles</h2>
+<h3>2. Tableaux et boucles</h3>
 <pre>
 const nombres = [1,2,3,4,5];
-for(let i=0; i&lt;nombres.length; i++){
+for(let i=0; i<nombres.length; i++){
     console.log(nombres[i]);
 }
 </pre>
-<p>Boucle <code>for</code> pour parcourir le tableau et afficher chaque élément.</p>
+<p>On parcourt le tableau avec une boucle `for` et on affiche chaque valeur.</p>
 </div>
 
 <div class="card" id="ex3">
-<h2>3. Fonctions</h2>
+<h3>3. Fonctions</h3>
 <pre>
 function carre(n){
     return n * n;
 }
 console.log(carre(5)); // 25
 </pre>
-<p>La fonction prend un argument et renvoie son carré. On utilise <code>return</code> pour renvoyer la valeur.</p>
+<p>Fonction simple avec paramètre et `return` pour renvoyer le carré.</p>
 </div>
+
+<div class="card" id="ex4">
+<h3>4. Manipulation du DOM</h3>
+<pre>
+document.querySelector("#monParagraphe").textContent = "Nouveau texte";
+</pre>
+<p>On cible un élément et on modifie son contenu avec `textContent`.</p>
+</div>
+
+<div class="card" id="ex5">
+<h3>5. Événements</h3>
+<pre>
+document.querySelector("#monBouton").addEventListener("click", () =&gt; {
+  alert("Bouton cliqué !");
+});
+</pre>
+<p>On écoute le clic du bouton avec `addEventListener` et on déclenche une alerte.</p>
+</div>
+
+<!-- ... Les solutions 6 à 19 suivent la même structure ... -->
 
 <div class="card" id="ex20">
-<h2>20. Mini-projet : Todo List</h2>
-<p>Projet généré entièrement via JavaScript et CSS, avec stockage localStorage.</p>
+<h3>20. Mini-projet : Todo List</h3>
 <pre>
-// Code complet JS pour créer la todo-list
-</pre>
-<p>Explications : création des éléments via <code>document.createElement</code>, gestion des événements avec <code>addEventListener</code>, stockage localStorage, classes CSS dynamiques pour l’état complété.</p>
-</div>
-</main>
-
-</body>
-</html>
+// Exemple simplifié :
+const input = document.createElement("input");
+const button = document.createElement("button");
+button.textContent = "Ajouter";
+const ul = document.createElement("ul");
+document.body.append(input
