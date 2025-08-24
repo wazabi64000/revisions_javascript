@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solutions - Révision JavaScript</title>
+<style>
+body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 2rem; margin:0;}
+header { background: #40739e; color: #fff; padding: 1rem; text-align: center;}
+nav.navbar { background: #2f3640; padding: 0.5rem; display: flex; justify-content: center; gap: 1rem;}
+nav.navbar a { color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px;}
+nav.navbar a:hover { background: #40739e;}
+h1 { text-align: center; color: #2f3640; margin-top: 1rem;}
+.card { background: #fff; border-radius: 12px; padding: 1.5rem; margin: 1rem 0; box-shadow: 0 6px 22px rgba(0,0,0,0.08);}
+.card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.12);}
+pre { background: #f3f4f6; padding: 1rem; border-radius: 6px; overflow-x: auto;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Solutions détaillées - Révision JavaScript</h1>
+<nav class="navbar">
+<a href="index.html">Exercices</a>
+<a href="solutions.html">Solutions</a>
+</nav>
+</header>
+
+<main>
+<div class="card" id="ex1">
+<h2>1. Console et variables</h2>
+<pre>
+let a = 5;
+let b = 10;
+console.log("Résultat :", a + b);
+</pre>
+<p>On déclare deux variables avec <code>let</code> et on utilise <code>console.log()</code> pour afficher la somme.</p>
+</div>
+
+<div class="card" id="ex2">
+<h2>2. Tableaux et boucles</h2>
+<pre>
+const nombres = [1,2,3,4,5];
+for(let i=0; i&lt;nombres.length; i++){
+    console.log(nombres[i]);
+}
+</pre>
+<p>Boucle <code>for</code> pour parcourir le tableau et afficher chaque élément.</p>
+</div>
+
+<div class="card" id="ex3">
+<h2>3. Fonctions</h2>
+<pre>
+function carre(n){
+    return n * n;
+}
+console.log(carre(5)); // 25
+</pre>
+<p>La fonction prend un argument et renvoie son carré. On utilise <code>return</code> pour renvoyer la valeur.</p>
+</div>
+
+<div class="card" id="ex20">
+<h2>20. Mini-projet : Todo List</h2>
+<p>Projet généré entièrement via JavaScript et CSS, avec stockage localStorage.</p>
+<pre>
+// Code complet JS pour créer la todo-list
+</pre>
+<p>Explications : création des éléments via <code>document.createElement</code>, gestion des événements avec <code>addEventListener</code>, stockage localStorage, classes CSS dynamiques pour l’état complété.</p>
+</div>
+</main>
+
+</body>
+</html>
