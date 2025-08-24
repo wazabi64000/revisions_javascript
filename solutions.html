@@ -27,6 +27,8 @@ pre { background: #f3f4f6; padding: 1rem; border-radius: 6px; overflow-x: auto;}
 
 <main>
 
+<!-- EXERCICES FACILES -->
+
 <div class="card" id="ex1">
 <h3>1. Console et variables</h3>
 <pre>
@@ -34,29 +36,29 @@ let a = 5;
 let b = 10;
 console.log("Résultat :", a + b);
 </pre>
-<p>Deux variables sont déclarées et additionnées. `console.log()` permet d’afficher le résultat.</p>
+<p><strong>Explication :</strong> On déclare deux variables avec <code>let</code> et on utilise <code>console.log</code> pour afficher leur somme. C’est le premier pas pour comprendre la manipulation des variables et l’affichage en console.</p>
 </div>
 
 <div class="card" id="ex2">
 <h3>2. Tableaux et boucles</h3>
 <pre>
-const nombres = [1,2,3,4,5];
-for(let i=0; i<nombres.length; i++){
-    console.log(nombres[i]);
+const nombres = [1, 2, 3, 4, 5];
+for (let i = 0; i < nombres.length; i++) {
+  console.log(nombres[i]);
 }
 </pre>
-<p>On parcourt le tableau avec une boucle `for` et on affiche chaque valeur.</p>
+<p><strong>Explication :</strong> Un tableau est une collection ordonnée. La boucle <code>for</code> permet d’itérer sur chaque élément. La propriété <code>length</code> retourne le nombre d’éléments.</p>
 </div>
 
 <div class="card" id="ex3">
 <h3>3. Fonctions</h3>
 <pre>
-function carre(n){
-    return n * n;
+function carre(n) {
+  return n * n;
 }
 console.log(carre(5)); // 25
 </pre>
-<p>Fonction simple avec paramètre et `return` pour renvoyer le carré.</p>
+<p><strong>Explication :</strong> Les fonctions prennent des paramètres et retournent des valeurs. Ici, on calcule le carré d’un nombre.</p>
 </div>
 
 <div class="card" id="ex4">
@@ -64,27 +66,212 @@ console.log(carre(5)); // 25
 <pre>
 document.querySelector("#monParagraphe").textContent = "Nouveau texte";
 </pre>
-<p>On cible un élément et on modifie son contenu avec `textContent`.</p>
+<p><strong>Explication :</strong> <code>querySelector</code> cible un élément DOM par son ID, et <code>textContent</code> modifie le texte visible. Cela introduit la manipulation du DOM.</p>
 </div>
 
 <div class="card" id="ex5">
 <h3>5. Événements</h3>
 <pre>
-document.querySelector("#monBouton").addEventListener("click", () =&gt; {
+document.querySelector("#monBouton").addEventListener("click", () => {
   alert("Bouton cliqué !");
 });
 </pre>
-<p>On écoute le clic du bouton avec `addEventListener` et on déclenche une alerte.</p>
+<p><strong>Explication :</strong> Les événements permettent de rendre la page interactive. Ici, un clic déclenche une alerte.</p>
 </div>
 
-<!-- ... Les solutions 6 à 19 suivent la même structure ... -->
+<!-- EXERCICES MOYENS -->
+
+<div class="card" id="ex6">
+<h3>6. Objets simples</h3>
+<pre>
+const personne = { nom: "Alice", age: 25 };
+console.log(personne.nom);
+</pre>
+<p><strong>Explication :</strong> Les objets regroupent plusieurs valeurs sous des clés. On peut accéder à chaque propriété via <code>objet.propriété</code>.</p>
+</div>
+
+<div class="card" id="ex7">
+<h3>7. Méthodes d’objets</h3>
+<pre>
+const personne = {
+  nom: "Alice",
+  saluer: function() { return "Bonjour, je m'appelle " + this.nom; }
+};
+console.log(personne.saluer());
+</pre>
+<p><strong>Explication :</strong> Les méthodes sont des fonctions attachées aux objets. <code>this</code> fait référence à l’objet courant.</p>
+</div>
+
+<div class="card" id="ex8">
+<h3>8. Boucles avancées</h3>
+<pre>
+const utilisateurs = [
+  { nom: "Alice", age: 25 },
+  { nom: "Bob", age: 30 }
+];
+utilisateurs.forEach(u => console.log(u.nom + " a " + u.age + " ans"));
+</pre>
+<p><strong>Explication :</strong> <code>forEach</code> permet de parcourir un tableau d’objets et d’accéder directement à chaque élément.</p>
+</div>
+
+<div class="card" id="ex9">
+<h3>9. Math et Date</h3>
+<pre>
+console.log(Math.random()); // nombre entre 0 et 1
+console.log(new Date());    // date actuelle
+</pre>
+<p><strong>Explication :</strong> L’objet <code>Math</code> fournit des méthodes mathématiques utiles. <code>Date</code> permet de gérer le temps et la date.</p>
+</div>
+
+<div class="card" id="ex10">
+<h3>10. Getters et Setters</h3>
+<pre>
+const personne = {
+  _age: 25,
+  get age() { return this._age; },
+  set age(n) { this._age = n; }
+};
+console.log(personne.age);
+personne.age = 30;
+console.log(personne.age);
+</pre>
+<p><strong>Explication :</strong> Les getters et setters permettent de contrôler la lecture et l’écriture d’une propriété, utile pour validation ou calcul.</p>
+</div>
+
+<!-- EXERCICES DIFFICILES -->
+
+<div class="card" id="ex11">
+<h3>11. LocalStorage</h3>
+<pre>
+localStorage.setItem("nom", "Alice");
+console.log(localStorage.getItem("nom"));
+</pre>
+<p><strong>Explication :</strong> LocalStorage conserve les données même après fermeture du navigateur. <code>setItem</code> stocke, <code>getItem</code> récupère.</p>
+</div>
+
+<div class="card" id="ex12">
+<h3>12. SessionStorage</h3>
+<pre>
+sessionStorage.setItem("couleur", "bleu");
+console.log(sessionStorage.getItem("couleur"));
+</pre>
+<p><strong>Explication :</strong> SessionStorage stocke des données pour la session en cours. Fermeture du navigateur = perte des données.</p>
+</div>
+
+<div class="card" id="ex13">
+<h3>13. Filtrage de tableau</h3>
+<pre>
+const nombres = [1,2,3,4,5];
+const pairs = nombres.filter(n => n % 2 === 0);
+console.log(pairs);
+</pre>
+<p><strong>Explication :</strong> <code>filter</code> crée un nouveau tableau en sélectionnant les éléments selon une condition.</p>
+</div>
+
+<div class="card" id="ex14">
+<h3>14. Map et Reduce</h3>
+<pre>
+const nombres = [1,2,3,4];
+const doubles = nombres.map(n => n*2);
+const somme = nombres.reduce((acc, n) => acc + n, 0);
+console.log(doubles, somme);
+</pre>
+<p><strong>Explication :</strong> <code>map</code> transforme un tableau, <code>reduce</code> combine les valeurs en une seule.</p>
+</div>
+
+<div class="card" id="ex15">
+<h3>15. Classes</h3>
+<pre>
+class Animal {
+  constructor(nom) { this.nom = nom; }
+  parler() { return this.nom + " fait un bruit"; }
+}
+const chat = new Animal("Miaou");
+console.log(chat.parler());
+</pre>
+<p><strong>Explication :</strong> Les classes définissent des objets réutilisables. <code>constructor</code> initialise et les méthodes définissent les comportements.</p>
+</div>
+
+<div class="card" id="ex16">
+<h3>16. Création d’éléments DOM</h3>
+<pre>
+const ul = document.createElement("ul");
+for(let i=1;i<=5;i++){
+  const li = document.createElement("li");
+  li.textContent = "Item " + i;
+  ul.appendChild(li);
+}
+document.body.appendChild(ul);
+</pre>
+<p><strong>Explication :</strong> On crée des éléments dynamiquement et on les ajoute au DOM. Très utile pour générer du contenu avec JS.</p>
+</div>
+
+<div class="card" id="ex17">
+<h3>17. Événements complexes</h3>
+<pre>
+const input = document.createElement("input");
+const div = document.createElement("div");
+document.body.append(input, div);
+input.addEventListener("input", () =&gt; {
+  div.textContent = "Vous avez tapé : " + input.value;
+});
+</pre>
+<p><strong>Explication :</strong> Écouter l’événement <code>input</code> pour chaque frappe et mettre à jour le DOM en temps réel.</p>
+</div>
+
+<div class="card" id="ex18">
+<h3>18. Mini-calculatrice</h3>
+<pre>
+function calculer(a,b,op){
+  switch(op){
+    case "+": return a+b;
+    case "-": return a-b;
+    case "*": return a*b;
+    case "/": return a/b;
+  }
+}
+console.log(calculer(5,3,"*")); // 15
+</pre>
+<p><strong>Explication :</strong> La fonction prend un opérateur et applique le calcul correspondant via <code>switch</code>.</p>
+</div>
+
+<div class="card" id="ex19">
+<h3>19. API Fake JSON</h3>
+<pre>
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then(res =&gt; res.json())
+  .then(data =&gt; console.log(data));
+</pre>
+<p><strong>Explication :</strong> On utilise <code>fetch</code> pour récupérer des données JSON et les afficher. Idéal pour comprendre l’appel d’API.</p>
+</div>
 
 <div class="card" id="ex20">
 <h3>20. Mini-projet : Todo List</h3>
 <pre>
-// Exemple simplifié :
+// Création des éléments
 const input = document.createElement("input");
 const button = document.createElement("button");
 button.textContent = "Ajouter";
 const ul = document.createElement("ul");
-document.body.append(input
+document.body.append(input, button, ul);
+
+// Ajout d'élément à la liste
+button.addEventListener("click", () =&gt; {
+  if(input.value.trim() !== ""){
+    const li = document.createElement("li");
+    li.textContent = input.value;
+    ul.appendChild(li);
+    localStorage.setItem("todos", ul.innerHTML);
+    input.value = "";
+  }
+});
+
+// Récupération depuis localStorage
+ul.innerHTML = localStorage.getItem("todos") || "";
+</pre>
+<p><strong>Explication :</strong> Todo-list entièrement générée par JS. On crée les éléments, ajoute des événements, et on stocke les données avec <code>localStorage</code>. C’est un mini-projet complet pour comprendre DOM, événements et stockage local.</p>
+</div>
+
+</main>
+</body>
+</html>
