@@ -3,66 +3,55 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Exercice JavaScript - Révision en 20 étapes</title>
-<link rel="stylesheet" href="style.css">
+<title>Révision JavaScript - Exercices</title>
 <style>
-body { font-family: Arial, sans-serif; background: #f5f6fa; color: #333; padding: 1rem; }
-h1 { color: #2f3640; }
-h2 { color: #40739e; margin-top: 2rem; }
-ul { margin-left: 1.5rem; }
-.code { background: #f3f4f6; padding: 0.8rem; border-left: 4px solid #40739e; margin: 0.5rem 0; font-family: monospace; overflow-x: auto; }
-.note { background: #fffae6; padding: 0.8rem; border-left: 4px solid #fbc531; margin: 0.5rem 0; font-style: italic; }
+body { font-family: Arial, sans-serif; background: #f0f4f8; padding: 2rem; margin:0;}
+header { background: #40739e; color: #fff; padding: 1rem; text-align: center;}
+nav.navbar { background: #2f3640; padding: 0.5rem; display: flex; justify-content: center; gap: 1rem;}
+nav.navbar a { color: #fff; text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px;}
+nav.navbar a:hover { background: #40739e;}
+h1 { text-align: center; color: #2f3640; margin-top: 1rem;}
+.card { background: #fff; border-radius: 12px; padding: 1.5rem; margin: 1rem 0; box-shadow: 0 6px 22px rgba(0,0,0,0.08);}
+.card:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,0.12);}
+button { background: #40739e; color: #fff; padding: 0.5rem 1rem; border: none; border-radius: 6px; cursor: pointer;}
+button:hover { background: #273c75;}
 </style>
 </head>
 <body>
 
-<h1>Exercice JavaScript - Révision en 20 étapes</h1>
-<p>Objectif : Réviser les bases de JavaScript et créer un mini-projet dynamique uniquement avec JS et CSS.</p>
+<header>
+<h1>Révision JavaScript - Exercices</h1>
+<nav class="navbar">
+<a href="index.html">Exercices</a>
+<a href="solutions.html">Solutions</a>
+</nav>
+</header>
 
-<h2>Instructions générales :</h2>
-<ul>
-<li>Créer un fichier <code>index.html</code>, <code>style.css</code> et <code>script.js</code>.</li>
-<li>Ne pas écrire de contenu HTML statique : tout doit être généré via JavaScript.</li>
-<li>Réaliser les exercices dans l'ordre pour progresser du niveau facile au difficile.</li>
-<li>Utiliser la console pour tester vos variables, boucles, fonctions et objets.</li>
-<li>À la fin, relier votre mini-projet au CSS pour un rendu esthétique.</li>
-</ul>
+<main>
+<div class="card">
+<h2>1. Console et variables (Facile)</h2>
+<p>Déclarez deux variables, additionnez-les et affichez le résultat dans la console.</p>
+<button onclick="location.href='solutions.html#ex1'">Voir la solution</button>
+</div>
 
-<h2>Étapes de révision</h2>
+<div class="card">
+<h2>2. Tableaux et boucles (Facile)</h2>
+<p>Créez un tableau de nombres et affichez chacun d’eux dans la console à l’aide d’une boucle.</p>
+<button onclick="location.href='solutions.html#ex2'">Voir la solution</button>
+</div>
 
-<ol>
-<li><strong>Console et alert</strong> : Afficher des messages dans la console et avec <code>alert()</code>.</li>
-<li><strong>Variables</strong> : Déclarer <code>let</code>, <code>const</code>, <code>var</code> et manipuler leurs valeurs.</li>
-<li><strong>Types de données</strong> : String, Number, Boolean, null, undefined.</li>
-<li><strong>Tableaux</strong> : Création, accès aux éléments, ajout/suppression avec <code>push/pop/shift/unshift</code>.</li>
-<li><strong>Objets</strong> : Créer un objet, accéder à ses propriétés et méthodes.</li>
-<li><strong>Boucles</strong> : <code>for</code>, <code>while</code>, <code>for...of</code>.</li>
-<li><strong>Conditions</strong> : <code>if/else</code>, <code>switch</code>.</li>
-<li><strong>Fonctions</strong> : Déclaration, expression, fléchées, paramètres et retour de valeur.</li>
-<li><strong>DOM - sélection</strong> : <code>getElementById</code>, <code>querySelector</code>, <code>querySelectorAll</code>.</li>
-<li><strong>DOM - modification</strong> : <code>textContent</code>, <code>innerHTML</code>, <code>style</code>.</li>
-<li><strong>Événements</strong> : <code>addEventListener</code> sur click, input, submit.</li>
-<li><strong>Formulaires</strong> : Récupérer les valeurs des inputs et valider les données.</li>
-<li><strong>Objet Math</strong> : <code>Math.random()</code>, <code>Math.floor()</code>, <code>Math.round()</code>.</li>
-<li><strong>Objet Date</strong> : Créer des dates, récupérer jour, mois, année, heure.</li>
-<li><strong>Getters et setters</strong> : Créer des objets avec méthodes <code>get</code> et <code>set</code>.</li>
-<li><strong>LocalStorage et SessionStorage</strong> : Stocker, récupérer et supprimer des données.</li>
-<li><strong>JSON</strong> : Conversion <code>JSON.stringify()</code> et <code>JSON.parse()</code>.</li>
-<li><strong>Niveau intermédiaire :</strong> Créer une petite liste interactive : ajouter, modifier et supprimer des éléments via JS.</li>
-<li><strong>Niveau difficile :</strong> Générer tout le contenu HTML avec JS pour un mini tableau ou galerie.</li>
-<li><strong>Projet final :</strong> Créer un mini-projet : liste de films, galerie de produits ou todo-list entièrement générée par JS et stylisée avec CSS.</li>
-</ol>
+<div class="card">
+<h2>3. Fonctions (Facile)</h2>
+<p>Créez une fonction qui prend un nombre et renvoie son carré.</p>
+<button onclick="location.href='solutions.html#ex3'">Voir la solution</button>
+</div>
 
-<h2>Objectifs pédagogiques</h2>
-<ul>
-<li>Maîtriser la console, les variables, tableaux, objets et fonctions.</li>
-<li>Manipuler le DOM et gérer les événements.</li>
-<li>Comprendre le stockage web (localStorage/sessionStorage).</li>
-<li>Passer d’un simple script JS à un projet dynamique complet.</li>
-<li>Préparer le passage à un backend Express et à des appels API.</li>
-</ul>
-
-<p class="note">Astuce : Commencez par des petits exercices pour chaque étape, puis combinez-les progressivement pour créer votre mini-projet final.</p>
+<div class="card">
+<h2>20. Mini-projet JS (Difficile)</h2>
+<p>Créez une todo-list entièrement générée en JS, avec stockage dans localStorage et styles CSS.</p>
+<button onclick="location.href='solutions.html#ex20'">Voir la solution</button>
+</div>
+</main>
 
 </body>
 </html>
